@@ -149,9 +149,12 @@ b,strong{font-weight: 600;}
 p strong:first-child {
     display: block;
     color: var(--navy);
-    font-size: 1.1em;
+    font-size: 1.05em;
     margin-bottom: 8px;
     font-family: 'Roboto Slab', serif;
+    line-height: 1.4em;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Card-style paragraphs following certain headings */
@@ -619,6 +622,10 @@ footer{
 }
 .keynote-details {
     margin-top: 10px;
+    display: block;
+}
+.keynote-details > *:not(summary) {
+    display: block !important;
 }
 .keynote-details summary {
     cursor: pointer;
@@ -630,11 +637,11 @@ footer{
     list-style: none;
 }
 .keynote-details summary::before {
-    content: '+ ';
+    content: '− ';
     font-weight: 700;
 }
-.keynote-details[open] summary::before {
-    content: '− ';
+.keynote-details:not([open]) summary::before {
+    content: '+ ';
 }
 .keynote-details summary:hover {
     color: var(--red);
