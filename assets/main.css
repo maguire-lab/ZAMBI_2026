@@ -382,6 +382,44 @@ table.plenary{
     margin: 8px 0;
 }
 
+/* Nested agenda/schedule table (e.g. Agricultural Campus day) */
+table.agenda{
+    width: 100%;
+    border-collapse: collapse;
+}
+table.agenda td{
+    vertical-align: top;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--shadow-light);
+}
+table.agenda tr:last-child td{
+    border-bottom: none;
+}
+td.agenda-time{
+    white-space: nowrap;
+    width: 120px;
+    padding-right: 16px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    opacity: 0.8;
+}
+td.agenda-event{
+    font-weight: 500;
+}
+.agenda-loc,
+.agenda-by{
+    display: block;
+    margin-top: 3px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.78em;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.65;
+    color: var(--mauve);
+}
+.agenda-loc::before{ content: "("; }
+.agenda-loc::after{ content: ")"; }
+
 /* Registration and Directions iframes and Images */
 iframe.registration{
     display:block;
