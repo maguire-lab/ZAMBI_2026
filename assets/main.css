@@ -366,6 +366,14 @@ td.speaker{
     color: var(--navy);
     opacity: 0.85;
 }
+td.speaker .chairs{
+    font-size: 0.85em;
+    font-weight: normal;
+    opacity: 0.7;
+}
+td.speaker .chairs b{
+    font-weight: normal;
+}
 td.abstract{
     padding: 8px 16px 16px 8px;
     font-size:0.9em;
